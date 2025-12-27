@@ -201,16 +201,16 @@ a {
   white-space: normal;
 }
 
+a:visited {
+  color: var(--a-txt-color);
+}
+
 a:hover {
   color: var(--a-ul-color);
   text-decoration: underline;
   text-decoration-style: wavy;
   text-decoration-color: var(--a-ul-color);
   text-decoration-skip-ink: auto;
-}
-
-a:visited {
-  color: var(--a-txt-color);
 }
 
 .roundel > a,
