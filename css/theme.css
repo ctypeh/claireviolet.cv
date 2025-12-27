@@ -206,11 +206,18 @@ a:visited {
 }
 
 a:hover {
-  color: var(--a-ul-color);
   text-decoration: underline;
   text-decoration-style: wavy;
   text-decoration-color: var(--a-ul-color);
   text-decoration-skip-ink: auto;
+}
+
+a:hover {
+  color: var(--a-txt-color);
+}
+
+a:hover:not(.callout) {
+  color: var(--a-ul-color);
 }
 
 .roundel > a,
