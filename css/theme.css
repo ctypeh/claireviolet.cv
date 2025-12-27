@@ -1,17 +1,17 @@
 /* IMPORTS */
-@import url('https://rsms.me/raster/raster2.css');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400');
+@import url("https://rsms.me/raster/raster2.css");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400");
 
 /* DEFINITIONS */
 :root {
   color-scheme: light dark;
-  --yellow: #FEDB00;
+  --yellow: #fedb00;
   --violet: #440099;
-  --font-family-base: 'Inter', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
-  --font-family-variable: 'InterVariable', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  --font-family-base: "Inter", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  --font-family-variable: "InterVariable", "Helvetica Neue", "Helvetica", Arial,
+    sans-serif;
   font-size: 15px !important;
 }
-
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -79,9 +79,11 @@ body {
   }
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: 800; /* Extra Bold */
-  font-family: 'InterDisplay', 'InterVariable', 'Inter', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  font-family: "InterDisplay", "InterVariable", "Inter", "Helvetica Neue",
+    "Helvetica", Arial, sans-serif;
 }
 
 #title {
@@ -89,16 +91,24 @@ h1, h2 {
   letter-spacing: -0.1rem;
 }
 
-h3, .callout {
+h3,
+.callout {
   font-weight: 700; /* Bold */
 }
 
-blockquote, label, div, h3, ul, li, p {
+blockquote,
+label,
+div,
+h3,
+ul,
+li,
+p {
   font-weight: 400; /* Regular */
 }
 
 code {
-  font-family: 'Fira Code', 'SF Mono', 'Menlo', 'IBM Plex Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family: "Fira Code", "SF Mono", "Menlo", "IBM Plex Mono",
+    "DejaVu Sans Mono", "Bitstream Vera Sans Mono", Courier, monospace;
   font-weight: 300; /* Light */
   letter-spacing: -1px;
 }
@@ -106,19 +116,19 @@ code {
 h1 {
   font-size: 5.5rem;
   line-height: 1;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 h2 {
   font-size: 2.5rem;
   line-height: 1;
-  margin-bottom: .66rem;
+  margin-bottom: 0.66rem;
 }
 
 h3 {
   font-size: 1.5rem;
   line-height: 1;
-  margin-bottom: .66rem;
+  margin-bottom: 0.66rem;
 }
 
 p {
@@ -126,24 +136,32 @@ p {
   text-wrap: pretty;
 }
 
-blockquote, label, code, div, ul, li, a {
+blockquote,
+label,
+code,
+div,
+ul,
+li,
+a {
   font-size: inherit;
   line-height: 1.25;
-  margin-bottom: .66rem;
+  margin-bottom: 0.66rem;
 }
 
-blockquote, ul {
-  margin-bottom: .33em;
+blockquote,
+ul {
+  margin-bottom: 0.33em;
 }
 
-blockquote, code {
+blockquote,
+code {
   border-left: solid 2px black;
   margin-left: 1em;
 }
 
 code {
-	line-height: 1;
-	margin-bottom: 0;
+  line-height: 1;
+  margin-bottom: 0;
 }
 
 ul {
@@ -158,8 +176,9 @@ ul.none {
   margin-left: 0;
 }
 
-row > span, row > a {
-	padding-right: .66em;
+row > span,
+row > a {
+  padding-right: 0.66em;
 }
 
 li {
@@ -194,7 +213,8 @@ a:visited {
   color: var(--a-txt-color);
 }
 
-.roundel > a, .roundel > a:hover {
+.roundel > a,
+.roundel > a:hover {
   user-select: none;
   cursor: wait;
   color: inherit;
@@ -234,8 +254,8 @@ icon {
 div.code {
   background-color: var(--txt-color);
   color: var(--bg-color);
-	margin: .66em;
-  padding: .66em;
+  margin: 0.66em;
+  padding: 0.66em;
 }
 
 .highlight {
@@ -254,9 +274,10 @@ a.emphasis {
   text-decoration: underline;
 }
 
-.note, .date {
+.note,
+.date {
   font-weight: 200; /* Extra Light */
-  font-size: .66rem;
+  font-size: 0.66rem;
   letter-spacing: -0.045rem;
 }
 
@@ -277,7 +298,7 @@ a.emphasis {
 hr {
   background: var(--txt-color);
   display: block;
-  height: .66rem;
+  height: 0.66rem;
   margin-bottom: 2.5rem;
   margin-left: 0;
   margin-right: 0;
@@ -334,7 +355,6 @@ hr {
   }
 }
 
-
 /* SPECIAL */
 emoji {
   font-style: normal !important;
@@ -373,11 +393,86 @@ ago, and so here it lives on. Thank you, internet.
   -webkit-animation: rainbow 15s ease infinite;
   -z-animation: rainbow 15s ease infinite;
   animation: rainbow 15s ease infinite;
-  background: -moz-linear-gradient(0deg, #ff2400, #fedb00, #fedb00, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3, #440099, #440099);
-  background: -o-linear-gradient(0deg, #ff2400, #fedb00, #fedb00, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3, #440099, #440099);
-  background: -webkit-linear-gradient(0deg, #ff2400, #fedb00, #fedb00, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3, #440099, #440099);
-  background: linear-gradient(0deg, #ff2400, #fedb00, #fedb00, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3, #440099, #440099);
-  background: linear-gradient(0deg, #ff2400, #fedb00, #fedb00, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3, #440099, #440099);
+  background: -moz-linear-gradient(
+    0deg,
+    #ff2400,
+    #fedb00,
+    #fedb00,
+    #e81d1d,
+    #e8b71d,
+    #e3e81d,
+    #1de840,
+    #1ddde8,
+    #2b1de8,
+    #dd00f3,
+    #dd00f3,
+    #440099,
+    #440099
+  );
+  background: -o-linear-gradient(
+    0deg,
+    #ff2400,
+    #fedb00,
+    #fedb00,
+    #e81d1d,
+    #e8b71d,
+    #e3e81d,
+    #1de840,
+    #1ddde8,
+    #2b1de8,
+    #dd00f3,
+    #dd00f3,
+    #440099,
+    #440099
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    #ff2400,
+    #fedb00,
+    #fedb00,
+    #e81d1d,
+    #e8b71d,
+    #e3e81d,
+    #1de840,
+    #1ddde8,
+    #2b1de8,
+    #dd00f3,
+    #dd00f3,
+    #440099,
+    #440099
+  );
+  background: linear-gradient(
+    0deg,
+    #ff2400,
+    #fedb00,
+    #fedb00,
+    #e81d1d,
+    #e8b71d,
+    #e3e81d,
+    #1de840,
+    #1ddde8,
+    #2b1de8,
+    #dd00f3,
+    #dd00f3,
+    #440099,
+    #440099
+  );
+  background: linear-gradient(
+    0deg,
+    #ff2400,
+    #fedb00,
+    #fedb00,
+    #e81d1d,
+    #e8b71d,
+    #e3e81d,
+    #1de840,
+    #1ddde8,
+    #2b1de8,
+    #dd00f3,
+    #dd00f3,
+    #440099,
+    #440099
+  );
   background-size: 2500% 2500%;
 }
 
