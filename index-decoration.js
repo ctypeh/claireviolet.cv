@@ -49,4 +49,27 @@ document.addEventListener("DOMContentLoaded", () => {
   roundel.addEventListener("mouseleave", () => {
     isHovering = false;
   });
+
+  const colorCopyStatus = document.querySelector("#color-copy-status");
+  document.querySelectorAll(".color-swatch[data-color]").forEach((swatch) => {
+    swatch.addEventListener("click", async () => {
+      const color = swatch.dataset.color;
+      const colorName = swatch.dataset.colorName;
+
+      if (!color) {
+        return;
+      }
+
+      try {
+        await navigator.clipboard.writeText(color);
+        if (colorCopyStatus) {
+          colorCopyStatus.textContent = `${colorName} (${color}) copied to clipboard.`;
+        }
+      } catch {
+        if (colorCopyStatus) {
+          colorCopyStatus.textContent = `Unable to copy ${colorName} (${color}).`;
+        }
+      }
+    });
+  });
 });

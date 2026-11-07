@@ -379,6 +379,31 @@ emoji {
   color: var(--violet);
 }
 
+.color-swatch {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: crosshair;
+  font: inherit;
+  line-height: inherit;
+  vertical-align: baseline;
+}
+
+.color-swatch:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 span.rainbow {
   cursor: wait;
   -webkit-background-clip: text;
