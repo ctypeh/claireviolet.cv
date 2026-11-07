@@ -438,3 +438,10 @@ ago, and so here it lives on. Thank you, internet.
     background-position: 0% 82%;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .rainbow {
+    animation: none;
+    background-position: 0% 82%;
+  }
+}
