@@ -13,8 +13,10 @@
   :root {
     --txt-color: black;
     --bg-color: white;
+    --highlight-txt-color: var(--txt-color);
     --highlight-bg-color: var(--yellow);
     --callout-txt-color: var(--violet);
+    --callout-bg-color: transparent;
     --a-txt-color: var(--violet);
     --a-ul-color: var(--yellow);
   }
@@ -25,6 +27,8 @@
     --txt-color: white;
     --bg-color: black;
     --highlight-txt-color: var(--yellow);
+    --highlight-bg-color: transparent;
+    --callout-txt-color: var(--txt-color);
     --callout-bg-color: var(--violet);
     --a-txt-color: var(--yellow);
     --a-ul-color: var(--violet);
