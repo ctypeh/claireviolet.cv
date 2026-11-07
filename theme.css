@@ -54,6 +54,11 @@ body {
 
 #banner {
   aspect-ratio: auto 5682 / 2075;
+  width: 100%;
+}
+
+r-cell > picture {
+  display: block;
 }
 
 .roundel {

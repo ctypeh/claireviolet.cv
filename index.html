@@ -85,11 +85,37 @@
         <div id="roundel" class="roundel">
           <span class="icon-text" id="cv">CV</span>
         </div>
-        <img
-          id="banner"
-          alt="A close up of a neon sign at Pike Place Public Market, in the shape of a salmon with inlaid text which reads City Fish Market."
-          src="img/banners/fish.jpeg"
-        />
+        <picture>
+          <source
+            type="image/avif"
+            srcset="
+              img/banners/fish-640.avif 640w,
+              img/banners/fish-1280.avif 1280w,
+              img/banners/fish-1920.avif 1920w
+            "
+            sizes="(max-width: 800px) 66vw, (max-width: 1032px) calc(100vw - 2rem), 1000px"
+          />
+          <source
+            type="image/webp"
+            srcset="
+              img/banners/fish-640.webp 640w,
+              img/banners/fish-1280.webp 1280w,
+              img/banners/fish-1920.webp 1920w
+            "
+            sizes="(max-width: 800px) 66vw, (max-width: 1032px) calc(100vw - 2rem), 1000px"
+          />
+          <img
+            id="banner"
+            alt="A close up of a neon sign at Pike Place Public Market, in the shape of a salmon with inlaid text which reads City Fish Market."
+            src="img/banners/fish-1280.jpeg"
+            srcset="
+              img/banners/fish-640.jpeg 640w,
+              img/banners/fish-1280.jpeg 1280w,
+              img/banners/fish-1920.jpeg 1920w
+            "
+            sizes="(max-width: 800px) 66vw, (max-width: 1032px) calc(100vw - 2rem), 1000px"
+          />
+        </picture>
         <h1 id="title">
           <span id="greeting">Hallo,</span> my name is
           <span class="highlight">Claire&nbsp;Violet</span
