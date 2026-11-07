@@ -52,6 +52,10 @@ body {
   background: var(--yellow);
 }
 
+#banner {
+  aspect-ratio: auto 5682 / 2075;
+}
+
 .roundel {
   font-weight: 900; /* Black */
   border-radius: 50px;
