@@ -179,11 +179,6 @@ ul.none {
   margin-left: 0;
 }
 
-row > span,
-row > a {
-  padding-right: 0.66em;
-}
-
 li {
   list-style: circle;
 }
