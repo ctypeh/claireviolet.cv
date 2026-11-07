@@ -401,89 +401,12 @@ span.rainbow {
   letter-spacing: 0em;
 }
 
-@media (prefers-color-scheme: dark) {
-  hr {
-    -webkit-background-clip: block;
-  }
-}
-
-hr.rainbow {
-  -webkit-background-clip: block;
-}
-
 /* I don't remember where I originally saw this lovely
 bit of css, but it made me very happy a number of years
 ago, and so here it lives on. Thank you, internet.
 */
 .rainbow {
-  -o-animation: rainbow 15s ease infinite;
-  -webkit-animation: rainbow 15s ease infinite;
-  -z-animation: rainbow 15s ease infinite;
   animation: rainbow 15s ease infinite;
-  background: -moz-linear-gradient(
-    0deg,
-    #ff2400,
-    #fedb00,
-    #fedb00,
-    #e81d1d,
-    #e8b71d,
-    #e3e81d,
-    #1de840,
-    #1ddde8,
-    #2b1de8,
-    #dd00f3,
-    #dd00f3,
-    #440099,
-    #440099
-  );
-  background: -o-linear-gradient(
-    0deg,
-    #ff2400,
-    #fedb00,
-    #fedb00,
-    #e81d1d,
-    #e8b71d,
-    #e3e81d,
-    #1de840,
-    #1ddde8,
-    #2b1de8,
-    #dd00f3,
-    #dd00f3,
-    #440099,
-    #440099
-  );
-  background: -webkit-linear-gradient(
-    0deg,
-    #ff2400,
-    #fedb00,
-    #fedb00,
-    #e81d1d,
-    #e8b71d,
-    #e3e81d,
-    #1de840,
-    #1ddde8,
-    #2b1de8,
-    #dd00f3,
-    #dd00f3,
-    #440099,
-    #440099
-  );
-  background: linear-gradient(
-    0deg,
-    #ff2400,
-    #fedb00,
-    #fedb00,
-    #e81d1d,
-    #e8b71d,
-    #e3e81d,
-    #1de840,
-    #1ddde8,
-    #2b1de8,
-    #dd00f3,
-    #dd00f3,
-    #440099,
-    #440099
-  );
   background: linear-gradient(
     0deg,
     #ff2400,
@@ -504,42 +427,6 @@ ago, and so here it lives on. Thank you, internet.
 }
 
 /* ANIMATIONS */
-@-webkit-keyframes rainbow {
-  0% {
-    background-position: 0% 82%;
-  }
-  50% {
-    background-position: 100% 19%;
-  }
-  100% {
-    background-position: 0% 82%;
-  }
-}
-
-@-moz-keyframes rainbow {
-  0% {
-    background-position: 0% 82%;
-  }
-  50% {
-    background-position: 100% 19%;
-  }
-  100% {
-    background-position: 0% 82%;
-  }
-}
-
-@-o-keyframes rainbow {
-  0% {
-    background-position: 0% 82%;
-  }
-  50% {
-    background-position: 100% 19%;
-  }
-  100% {
-    background-position: 0% 82%;
-  }
-}
-
 @keyframes rainbow {
   0% {
     background-position: 0% 82%;
