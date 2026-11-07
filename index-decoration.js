@@ -1,23 +1,26 @@
-$(document).ready(function () {
+document.addEventListener("DOMContentLoaded", () => {
+  const greetingElement = document.querySelector("#greeting");
   let greeting = "Hallo,";
-  let hr = new Date().getHours();
+  const hour = new Date().getHours();
 
-  if (hr >= 6 && hr < 12) {
+  if (hour >= 6 && hour < 12) {
     greeting = "Good Morning,";
-  } else if (hr == 12) {
-    /*Leave Default*/
-  } else if (hr > 12 && hr < 17) {
+  } else if (hour > 12 && hour < 17) {
     greeting = "Good Afternoon,";
-  } else if (hr >= 17 && hr < 21) {
+  } else if (hour >= 17 && hour < 21) {
     greeting = "Good Evening,";
-  } else if (hr >= 21 || hr < 6) {
-    /*Leave Default*/
-  } else {
-    /*Unknown, Leave Default*/
   }
-  $("#greeting").html(greeting);
 
-  let icons = [
+  if (greetingElement) {
+    greetingElement.textContent = greeting;
+  }
+
+  const roundel = document.querySelector("#roundel");
+  if (!roundel) {
+    return;
+  }
+
+  const icons = [
     { icon: "CV", id: "cv" },
     { icon: "☀", id: "sun" },
     { icon: "♡", id: "heart" },
@@ -25,21 +28,25 @@ $(document).ready(function () {
     { icon: "↪", id: "return" },
     { icon: "℅", id: "care-of" },
     { icon: "⏻", id: "power" },
-    { icon: "&#127744;", id: "spiral" },
+    { icon: "🌀", id: "spiral" },
   ];
   let isHovering = false;
 
-  $("#roundel").mouseenter(function () {
-    if (isHovering) return; // prevent multiple rapid fires caused by child element
+  roundel.addEventListener("mouseenter", () => {
+    if (isHovering) {
+      return;
+    }
     isHovering = true;
 
-    let rand = Math.floor(Math.random() * icons.length);
-    $("#roundel").html(
-      `<span class="icon-text" id="${icons[rand].id}">${icons[rand].icon}</span>`
-    );
+    const selectedIcon = icons[Math.floor(Math.random() * icons.length)];
+    const icon = document.createElement("span");
+    icon.className = "icon-text";
+    icon.id = selectedIcon.id;
+    icon.textContent = selectedIcon.icon;
+    roundel.replaceChildren(icon);
   });
 
-  $("#roundel").mouseleave(function () {
+  roundel.addEventListener("mouseleave", () => {
     isHovering = false;
   });
 });
