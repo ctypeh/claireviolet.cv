@@ -43,7 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
     icon.className = "icon-text";
     icon.id = selectedIcon.id;
     icon.textContent = selectedIcon.icon;
-    roundel.replaceChildren(icon);
+    roundel.textContent = "";
+    roundel.appendChild(icon);
   });
 
   roundel.addEventListener("mouseleave", () => {
