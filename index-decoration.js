@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const greetingElement = document.querySelector("#greeting");
-  let greeting = "Hallo,";
+  let greeting = "Hello,";
   const hour = new Date().getHours();
 
   if (hour >= 6 && hour < 12) {
