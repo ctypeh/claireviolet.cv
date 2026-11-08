@@ -3,3 +3,5 @@
 Icon
 .nova/Configuration.json
 .nova/Artwork
+!.nova/Tasks/
+!.nova/Tasks/Serve Site.json

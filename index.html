@@ -5,33 +5,55 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--INFO-->
-    <title>cv</title>
+    <title>ClaireViolet — Trans Software Engineer &amp; Photographer in Seattle</title>
     <meta name="author" content="ClaireViolet" />
     <meta
       name="description"
       content="ClaireViolet (she/her) is a software engineer, photographer, and archivist in Seattle, Washington."
     />
-    <meta
-      name="keywords"
-      content="Claire Violet, CV, Personal, Biography, Portfolio, Software, Engineer, Designer, Archivist, Connections Museum, Seattle, 108 C, 108-C, Pantone 108, assert_h, ctypeh"
-    />
+    <link rel="canonical" href="https://claireviolet.cv/" />
     <meta property="og:url" content="https://claireviolet.cv/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ClaireViolet" />
+    <meta property="og:locale" content="en_US" />
     <meta
       property="og:title"
-      content="ClaireViolet, Trans Software Engineer & Photographer in Seattle."
+      content="ClaireViolet, Trans Software Engineer &amp; Photographer in Seattle."
     />
     <meta
       property="og:description"
       content="ClaireViolet (she/her) is a transgender photographer, archivist, and software engineer in Seattle, Washington."
     />
-    <meta property="og:image" content="img/preview.png" />
+    <meta
+      property="og:image"
+      content="https://claireviolet.cv/img/preview.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="800" />
+    <meta
+      property="og:image:alt"
+      content="ClaireViolet in a yellow dress standing in front of green ivy and a stone wall."
+    />
     <!--SOCIAL-->
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="ClaireViolet, Trans Software Engineer &amp; Photographer in Seattle."
+    />
+    <meta
+      name="twitter:description"
+      content="ClaireViolet (she/her) is a transgender photographer, archivist, and software engineer in Seattle, Washington."
+    />
+    <meta name="twitter:image" content="https://claireviolet.cv/img/preview.png" />
+    <meta
+      name="twitter:image:alt"
+      content="ClaireViolet in a yellow dress standing in front of green ivy and a stone wall."
+    />
     <meta name="twitter:site" content="@assert_h" />
     <meta name="twitter:creator" content="@assert_h" />
     <link rel="me" href="https://tacobelllabs.net/@108" />
     <!--SEMIOTICS-->
-    <link rel="shortcut icon" href="favicon.ico" />
     <link rel="icon" type="image/png" href="icon.png" />
     <link
       rel="icon"
@@ -67,20 +89,16 @@
       content="#440099"
       media="(prefers-color-scheme: dark)"
     />
+    <link rel="preconnect" href="https://rsms.me" crossorigin />
+    <link rel="stylesheet" href="https://rsms.me/raster/raster2.css" />
     <link rel="stylesheet" href="theme.css" />
-    <link rel="preconnect" href="https://rsms.me/" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <!--SCRIPTS-->
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
-      crossorigin="anonymous"
-    ></script>
-    <script src="index-decoration.js"></script>
+    <script src="index-decoration.js" defer></script>
   </head>
 
   <body>
-    <r-grid columns="3" columns-s="1" style="max-width: 1000px">
+    <r-grid role="main" columns="3" columns-s="1" style="max-width: 1000px">
       <r-cell span="row">
         <div id="roundel" class="roundel">
           <span class="icon-text" id="cv">CV</span>
@@ -88,7 +106,13 @@
         <img
           id="banner"
           alt="A close up of a neon sign at Pike Place Public Market, in the shape of a salmon with inlaid text which reads City Fish Market."
-          src="img/banners/fish.jpeg"
+          src="img/banners/fish-1280.jpeg"
+          srcset="
+            img/banners/fish-640.jpeg 640w,
+            img/banners/fish-1280.jpeg 1280w,
+            img/banners/fish-1920.jpeg 1920w
+          "
+          sizes="(max-width: 800px) 66vw, (max-width: 1032px) calc(100vw - 2rem), 1000px"
         />
         <h1 id="title">
           <span id="greeting">Hallo,</span> my name is
@@ -119,7 +143,7 @@
           <h3>Photography</h3>
           <p>
             I have a
-            <a href="https://ultraviolet.photo"
+            <a href="https://ultraviolet.photo" rel="me"
               >webpage specifically for my photography</a
             >
             where you can
@@ -178,18 +202,22 @@
         <h3 id="colorway">About the Colors</h3>
         <p>
           This website makes liberal use of my favorite PANTONE colors,
-          <span
-            onclick="navigator.clipboard.writeText('#fedb00')"
-            style="cursor: crosshair"
-            class="yellow"
-            >●</span
+          <button
+            class="color-swatch yellow"
+            type="button"
+            data-color="#fedb00"
+            data-color-name="PANTONE 108 C"
+            aria-label="Copy #fedb00, the hex code for PANTONE 108 C"
+            >●</button
           >&nbsp;<a href="https://www.pantone.com/connect/108-C">108&nbsp;C</a>
           and
-          <span
-            onclick="navigator.clipboard.writeText('#440099')"
-            style="cursor: crosshair"
-            class="violet"
-            >●</span
+          <button
+            class="color-swatch violet"
+            type="button"
+            data-color="#440099"
+            data-color-name="PANTONE Violet C"
+            aria-label="Copy #440099, the hex code for PANTONE Violet C"
+            >●</button
           >&nbsp;<a href="https://www.pantone.com/connect/VIOLET-C"
             >Violet&nbsp;C</a
           >.<sup><em>†‡</em></sup> I love to use vibrant color wherever I can,
@@ -201,6 +229,11 @@
           >
           and likely isn't depicted very well on your device's screen.
         </p>
+        <span
+          id="color-copy-status"
+          class="visually-hidden"
+          aria-live="polite"
+        ></span>
       </r-cell>
       <r-cell span="3">
         <h3 id="colophon">Note on the Type</h3>
