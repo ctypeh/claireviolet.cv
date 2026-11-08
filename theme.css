@@ -228,6 +228,11 @@ a:hover:not(.callout) {
   color: black;
 }
 
+#spiral {
+  animation: cyclone 0.8s linear infinite;
+  transform-origin: center;
+}
+
 #power {
   transform: translateY(-2px);
   font-family: system-ui, var(--font-family-base);
@@ -439,9 +444,19 @@ ago, and so here it lives on. Thank you, internet.
   }
 }
 
+@keyframes cyclone {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .rainbow {
+  .rainbow,
+  #spiral {
     animation: none;
+  }
+
+  .rainbow {
     background-position: 0% 82%;
   }
 }
