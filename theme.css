@@ -300,7 +300,7 @@ a.emphasis {
 hr {
   background: var(--txt-color);
   display: block;
-  height: 0.66rem;
+  height: var(--hrThickness);
   margin-bottom: 2.5rem;
   margin-left: 0;
   margin-right: 0;
