@@ -53,6 +53,21 @@ body {
 
 #banner {
   aspect-ratio: auto 5682 / 2075;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 var(--baseline);
+  padding: 0;
+}
+
+.banner-figure {
+  margin: var(--baseline) 0 var(--lineHeight);
+}
+
+.banner-figure figcaption {
+  font-style: italic;
+  font-size: 0.9rem;
+  line-height: 1.1em;
 }
 
 .roundel {
@@ -272,6 +287,10 @@ div.code {
   text-decoration: none;
 }
 
+a > .only-large-window {
+  color: inherit;
+}
+
 a.emphasis {
   text-decoration: underline;
 }
@@ -300,7 +319,7 @@ a.emphasis {
 hr {
   background: var(--txt-color);
   display: block;
-  height: 0.66rem;
+  height: var(--hrThickness);
   margin-bottom: 2.5rem;
   margin-left: 0;
   margin-right: 0;
@@ -315,6 +334,10 @@ hr {
 }
 
 @media only screen and (max-width: 800px) {
+  .banner-figure {
+    max-width: 66%;
+  }
+
   img {
     /*background-color: var(--txt-color);*/
     /*padding: .33em;*/
